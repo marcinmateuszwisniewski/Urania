@@ -33,11 +33,11 @@ public class TimePrinter implements TimePrinterInterface {
     @Override
     public void printTime() {
         for (SingleTimeInterface time : timeSet) {
-            System.out.print(String.format("%-15s", time.getName()));
+            System.out.print(String.format("%-20s", time.getName()));
         }
         System.out.println();
         for (SingleTimeInterface time : timeSet) {
-            System.out.print(String.format("%-15s", DateTimeFormatter.ofLocalizedDateTime(this.formatStyle).format(time.now())));
+            System.out.print(String.format("%-20s", DateTimeFormatter.ofLocalizedDateTime(this.formatStyle).format(time.now())));
         }
         System.out.println();
     }
