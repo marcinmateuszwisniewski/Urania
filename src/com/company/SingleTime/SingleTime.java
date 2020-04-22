@@ -1,4 +1,4 @@
-package com.company;
+package com.company.SingleTime;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;

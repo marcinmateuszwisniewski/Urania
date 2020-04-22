@@ -1,11 +1,11 @@
-package com.company;
+package com.company.SingleTime;
 
 import java.time.ZoneId;
 import java.util.Set;
 
 public class SingleTimeFactory {
 
-    public static SingleTime produce(String city) {
+    public static SingleTimeInterface produce(String city) {
         System.out.println("start" + city);
         String zoneId = null;
         Set<String> timezoneNames = ZoneId.getAvailableZoneIds();

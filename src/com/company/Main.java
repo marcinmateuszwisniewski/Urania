@@ -1,5 +1,10 @@
 package com.company;
 
+import com.company.SingleTime.SingleTimeFactory;
+import com.company.TimePrinter.IntervalTimePrinter;
+import com.company.TimePrinter.TimePrinter;
+import com.company.TimePrinter.TimePrinterInterface;
+
 import java.time.format.FormatStyle;
 
 
