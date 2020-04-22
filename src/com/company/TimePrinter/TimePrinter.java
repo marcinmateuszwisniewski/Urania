@@ -12,24 +12,9 @@ public class TimePrinter implements TimePrinterInterface {
     Set<SingleTimeInterface> timeSet;
     FormatStyle formatStyle;
 
-    public TimePrinter() {
-        timeSet = new HashSet<>();
-        formatStyle = FormatStyle.SHORT;
-    }
-
-    @Override
-    public void addTime(SingleTimeInterface time) {
-        this.timeSet.add(time);
-    }
-
-    @Override
-    public void setFormat(FormatStyle formatStyle) {
+    public TimePrinter(FormatStyle formatStyle, Set<SingleTimeInterface> timeSet) {
+        this.timeSet = timeSet;
         this.formatStyle = formatStyle;
-    }
-
-    @Override
-    public void clear() {
-        this.timeSet.clear();
     }
 
     @Override

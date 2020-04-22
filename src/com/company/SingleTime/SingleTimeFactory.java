@@ -17,9 +17,7 @@ public class SingleTimeFactory {
             }
         }
         if (zoneId != null) {
-            SingleTime st = new SingleTime();
-            st.setTimezone(ZoneId.of(zoneId));
-            st.setName(city);
+            SingleTime st = new SingleTime(ZoneId.of(zoneId), city);
             System.out.println("end" + city);
             return st;
         } else return null;

@@ -4,11 +4,8 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
 public interface SingleTimeInterface {
-     String getName();
 
-     void setName(String name);
+    String getName();
 
      ZonedDateTime now();
-
-     void setTimezone(ZoneId zoneId);
 }
