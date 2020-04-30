@@ -19,13 +19,12 @@ public class TimePrinter implements TimePrinterInterface {
 
     @Override
     public void printTime() {
-        for (SingleTimeInterface time : timeSet) {
-            System.out.print(String.format("%-20s", time.getName()));
-        }
+
+        timeSet.stream().map(SingleTimeInterface::getName).forEach(t -> System.out.print(String.format("%-20s", t)));
         System.out.println();
-        for (SingleTimeInterface time : timeSet) {
-            System.out.print(String.format("%-20s", DateTimeFormatter.ofLocalizedDateTime(this.formatStyle).format(time.now())));
-        }
+        timeSet.stream().map(SingleTimeInterface::now).map(t -> DateTimeFormatter.ofLocalizedDateTime(this.formatStyle).format(t)).forEach(t -> System.out.print(String.format("%-20s", t)));
+        //alt(not sure if there is any difference):
+        // timeSet.stream().map(t-> DateTimeFormatter.ofLocalizedDateTime(this.formatStyle).format(t.now())).forEach(t -> System.out.print(String.format("%-20s", t)));
         System.out.println();
     }
 }
